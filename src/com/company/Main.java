@@ -2,15 +2,20 @@ package com.company;
 
 import java.util.Set;
 import java.util.TreeSet;
-
+/*
+ * основной класс
+ *
+ * @version 1.1 01 Nov 2018
+ * @author Anastasia Mironova
+ */
 public class Main {
 
-    public static void main(String[] args) {
-		ProductNameComparator PNComparator = new ProductNameComparator();
-		ProductCountComparator PCComparator = new ProductCountComparator();
+    public static void main(final String[] args) {
+		ProductNameComparator pnComparator = new ProductNameComparator();
+		ProductCountComparator pcComparator = new ProductCountComparator();
 
-    	Set<Product> products1 = new TreeSet<>(PNComparator);
-    	Set<Product> products2 = new TreeSet<>(PCComparator);
+    	Set<Product> products1 = new TreeSet<>(pnComparator);
+    	Set<Product> products2 = new TreeSet<>(pcComparator);
 
 
 	    products1.add(new Product("Microwave", 20));
